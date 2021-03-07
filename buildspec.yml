@@ -11,13 +11,13 @@ env:
 phases:
   install:
      runtime-versions:
-      dotnet: $env:DOTNET_FRAMEWORK
+      dotnet: $DOTNET_FRAMEWORK
 
   build:
     commands:
       - dotnet nuget help restore
-      - dotnet nuget restore $env:SOLUTION -PackagesDirectory $env:PACKAGE_DIRECTORY
-      - msbuild -p:FrameworkPathOverride="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v$env:DOTNET_FRAMEWORK" $env:SOLUTION
+      - dotnet nuget restore $SOLUTION -PackagesDirectory $PACKAGE_DIRECTORY
+      - msbuild -p:FrameworkPathOverride="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\vDOTNET_FRAMEWORK" $SOLUTION
 
 
 artifacts:
