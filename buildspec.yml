@@ -5,14 +5,10 @@ env:
   variables:
     SOLUTION: .\sample.sln
     PACKAGE_DIRECTORY: .\sample_publish
-    DOTNET_FRAMEWORK: 4.8
+    DOTNET_FRAMEWORK: 4.6.1
 
 
 phases:
-  install:
-     runtime-versions:
-      dotnet: $DOTNET_FRAMEWORK
-
   build:
     commands:
       - dotnet nuget help restore
