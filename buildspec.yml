@@ -9,7 +9,7 @@ env:
 
 
 phases:
-  installs:
+  install:
      runtime-versions:
       dotnet: $env:DOTNET_FRAMEWORK
 
