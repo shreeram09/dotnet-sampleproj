@@ -12,7 +12,7 @@ phases:
   installs:
      runtime-versions:
       dotnet: $env:DOTNET_FRAMEWORK
-      - 
+
   build:
     commands:
       - dotnet nuget help restore
